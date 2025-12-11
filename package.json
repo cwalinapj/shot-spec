@@ -1,0 +1,9 @@
+{
+  "name": "shot-spec-monorepo",
+  "private": true,
+  "workspaces": [
+    "phone-app",
+    "models/club-catalog"
+    // later you can add "cloud", "solana-tooling", etc.
+  ]
+}
