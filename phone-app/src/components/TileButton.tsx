@@ -15,7 +15,10 @@ export const TileButton: React.FC<TileButtonProps> = ({
   onPress,
 }) => {
   return (
-    <Pressable onPress={onPress} style={[styles.tile, selected && styles.tileSelected]}>
+    <Pressable
+      onPress={onPress}
+      style={[styles.tile, selected && styles.tileSelected]}
+    >
       <View>
         <Text style={styles.label}>{label}</Text>
         {subtitle ? <Text style={styles.subtitle}>{subtitle}</Text> : null}

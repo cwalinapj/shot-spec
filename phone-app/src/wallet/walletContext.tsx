@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useState } from 'react';
 
 type WalletContextType = {
   connected: boolean;
@@ -10,16 +10,16 @@ const WalletContext = createContext<WalletContextType>({
   address: null,
 });
 
-export const WalletProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const WalletProvider: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => {
   const [state] = useState<WalletContextType>({
     connected: false,
     address: null,
   });
 
   return (
-    <WalletContext.Provider value={state}>
-      {children}
-    </WalletContext.Provider>
+    <WalletContext.Provider value={state}>{children}</WalletContext.Provider>
   );
 };
 

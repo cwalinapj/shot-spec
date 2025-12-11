@@ -18,10 +18,22 @@ type BagStackParamList = {
 type Props = NativeStackScreenProps<BagStackParamList, 'BagOverview'>;
 
 const mockClubs: Club[] = [
-  { id: '1', type: 'driver', label: 'Driver', brand: 'Titleist', model: 'TSR3' },
+  {
+    id: '1',
+    type: 'driver',
+    label: 'Driver',
+    brand: 'Titleist',
+    model: 'TSR3',
+  },
   { id: '2', type: 'iron', label: '7i', brand: 'Mizuno', model: 'Pro 243' },
   { id: '3', type: 'wedge', label: '52°', brand: 'Vokey', model: 'SM9' },
-  { id: '4', type: 'putter', label: 'Putter', brand: 'Scotty', model: 'Newport 2' },
+  {
+    id: '4',
+    type: 'putter',
+    label: 'Putter',
+    brand: 'Scotty',
+    model: 'Newport 2',
+  },
 ];
 
 export const BagOverviewScreen: React.FC<Props> = ({ navigation }) => {
@@ -52,7 +64,10 @@ export const BagOverviewScreen: React.FC<Props> = ({ navigation }) => {
         <Text style={styles.addButtonText}>＋ Add a Club</Text>
       </Pressable>
 
-      <ScrollView style={styles.scroll} contentContainerStyle={{ paddingBottom: 32 }}>
+      <ScrollView
+        style={styles.scroll}
+        contentContainerStyle={{ paddingBottom: 32 }}
+      >
         {sections.map((section) => {
           const clubs = clubsByType(section.type);
           if (!clubs.length) return null;
@@ -62,7 +77,9 @@ export const BagOverviewScreen: React.FC<Props> = ({ navigation }) => {
               {clubs.map((club) => (
                 <View key={club.id} style={styles.clubRow}>
                   <Text style={styles.clubLabel}>{club.label}</Text>
-                  <Text style={styles.clubDetail}>{club.brand} • {club.model}</Text>
+                  <Text style={styles.clubDetail}>
+                    {club.brand} • {club.model}
+                  </Text>
                 </View>
               ))}
             </View>
@@ -74,7 +91,12 @@ export const BagOverviewScreen: React.FC<Props> = ({ navigation }) => {
 };
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#050509', paddingHorizontal: 20, paddingTop: 16 },
+  container: {
+    flex: 1,
+    backgroundColor: '#050509',
+    paddingHorizontal: 20,
+    paddingTop: 16,
+  },
   header: { marginBottom: 12 },
   title: { fontSize: 24, fontWeight: '700', color: '#fff', marginBottom: 4 },
   subtitle: { fontSize: 13, color: '#aaa' },
@@ -89,7 +111,12 @@ const styles = StyleSheet.create({
   addButtonText: { color: '#000', fontSize: 16, fontWeight: '600' },
   scroll: { flex: 1 },
   section: { marginBottom: 16 },
-  sectionTitle: { fontSize: 18, fontWeight: '600', color: '#fff', marginBottom: 8 },
+  sectionTitle: {
+    fontSize: 18,
+    fontWeight: '600',
+    color: '#fff',
+    marginBottom: 8,
+  },
   clubRow: {
     paddingVertical: 8,
     borderBottomWidth: StyleSheet.hairlineWidth,
