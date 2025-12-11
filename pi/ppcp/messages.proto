@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+package shotspec.ppcp.v1;
+
+// Core message that the Pi will eventually send to the phone
+message ImpactPacket {
+  string session_id      = 1;
+  string device_id       = 2;
+  int64  impact_ts_ms    = 3;
+
+  // Number of frames in the impact clip
+  int32  num_frames      = 4;
+
+  // Simple stats / embeddings generated on the Pi
+  ImpactStats left_stats  = 5;
+  ImpactStats right_stats = 6;
+
+  // TODO: add compressed embeddings, hashes, etc.
+}
+
+message ImpactStats {
+  float mean = 1;
+  float std  = 2;
+  float min  = 3;
+  float max  = 4;
+}
+
+// Health/status broadcast from Pi to phone
+message DeviceStatus {
+  string device_id   = 1;
+  float  temp_c      = 2;
+  int32  battery     = 3;
+  bool   stereo_ready = 4;
+  string accel_model  = 5;
+}

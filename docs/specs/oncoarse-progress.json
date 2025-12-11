@@ -1,0 +1,11 @@
+{
+  "context": {
+    "mode": "on_course",
+    "course_id": "course_lv_national",
+    "range_id": null,
+    "hole_number": 7,
+    "par": 4,
+    "shot_number_on_hole": 2,
+    "distance_to_pin_yd": 162
+  }
+}

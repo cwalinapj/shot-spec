@@ -1,0 +1,11 @@
+{
+  "context": {
+    "mode": "driving_range",
+    "course_id": null,
+    "range_id": "lv_practice_center",
+    "hole_number": null,
+    "par": null,
+    "shot_number_on_hole": null,
+    "distance_to_pin_yd": null
+  }
+}
