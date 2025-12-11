@@ -3,7 +3,7 @@ Deflation Mechanics Across CLUB-Native, Fiat-Cost, and Reward Flows
 
 The ShotSpec ecosystem uses a structured deflation model to ensure long-term token value, sustainability, and DAO-governed monetary control. All burn operations are transparent and verifiable on-chain.
 
---------------------------------------------------------------------
+---
 
 Purpose of the Burn System
 
@@ -13,20 +13,20 @@ The burn model serves the following functions:
 • Create long-term scarcity  
 • Reward stakers and early adopters via reduced inflation  
 • Allow DAO governance to tighten or loosen emissions as needed  
-• Incentivize real-world usage of ShotSpec devices and apps  
+• Incentivize real-world usage of ShotSpec devices and apps
 
---------------------------------------------------------------------
+---
 
 Burn Categories
 
 The protocol burns CLUB in four primary contexts:
 
-1. CLUB-native product purchases  
-2. Fiat-cost product purchases paid with CLUB  
-3. Reward pool anti-gaming deductions  
+1. CLUB-native product purchases
+2. Fiat-cost product purchases paid with CLUB
+3. Reward pool anti-gaming deductions
 4. Governance-directed discretionary burns
 
---------------------------------------------------------------------
+---
 
 Burn Percentages
 
@@ -44,18 +44,18 @@ Anti-cheat automatic deductions:
 
 DAO discretionary burns:
 • DAO may burn treasury CLUB to manage long-term emissions  
-• Used when CLUB velocity grows faster than model predictions  
+• Used when CLUB velocity grows faster than model predictions
 
---------------------------------------------------------------------
+---
 
 Burn Execution
 
 All burns take place using the standard SPL Token Program “Burn” instruction or by sending CLUB to a provable burn address controlled by no private keys.
 
---------------------------------------------------------------------
+---
 
 Future Enhancements
 
 • DAO-adjustable burn percentages  
 • Burn multiplier events during ecosystem milestones  
-• On-chain proof-of-burn dashboard  
+• On-chain proof-of-burn dashboard

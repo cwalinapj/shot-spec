@@ -1,4 +1,5 @@
 cat > README.md << 'EOF'
+
 # ShotSpec Monorepo
 
 ShotSpec is a **golf data + AI network** built around:
@@ -49,3 +50,4 @@ Top-level layout:
       |         Pi           |
       | Stereo Impact + AI   |
       +----------------------+
+```

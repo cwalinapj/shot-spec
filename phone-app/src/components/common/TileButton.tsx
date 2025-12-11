@@ -1,5 +1,5 @@
-import React from "react";
-import { Pressable, Text, View, StyleSheet } from "react-native";
+import React from 'react';
+import { Pressable, Text, View, StyleSheet } from 'react-native';
 
 type Props = {
   label: string;
@@ -21,13 +21,13 @@ const styles = StyleSheet.create({
     padding: 16,
     margin: 8,
     borderRadius: 12,
-    backgroundColor: "#111",
+    backgroundColor: '#111',
     borderWidth: 1,
-    borderColor: "#333",
+    borderColor: '#333',
   },
   label: {
-    color: "#fff",
+    color: '#fff',
     fontSize: 18,
-    fontWeight: "600",
+    fontWeight: '600',
   },
 });

@@ -28,3 +28,4 @@ Every shot includes a `context` object that at minimum carries the session mode:
     "mode": "driving_range"
   }
 }
+```

@@ -3,7 +3,7 @@ Neural Node, Lite Node, and Device-Based Token Earnings
 
 Mining nodes provide compute, capture impact footage, and strengthen the neural network. Users earn CLUB for operating devices that contribute validated data.
 
---------------------------------------------------------------------
+---
 
 Node Types
 
@@ -23,28 +23,28 @@ Lite Node
 Phone Node  
 • Uses smartphone GPS and camera  
 • Provides essential metadata  
-• Lowest earning tier but critical for early adoption  
+• Lowest earning tier but critical for early adoption
 
---------------------------------------------------------------------
+---
 
 Mining Earnings
 
 Neural Node:
 • Base multiplier highest  
 • Stereo impact data yields maximum rewards  
-• Acts as a compute contributor to certain model pipelines  
+• Acts as a compute contributor to certain model pipelines
 
 Lite Node:
 • Provides geometric context  
 • Multiplies Neural Node earnings when used together  
-• Ideal for cart-mounted setups  
+• Ideal for cart-mounted setups
 
 Phone Node:
 • Provides score, lie, club, and GPS  
 • Required for most rewards  
-• Anti-cheat cornerstone  
+• Anti-cheat cornerstone
 
---------------------------------------------------------------------
+---
 
 Data Types That Earn
 
@@ -54,9 +54,9 @@ Data Types That Earn
 • Ball launch direction (multi-angle)  
 • Environmental metadata  
 • Course geometry  
-• Scorekeeping and shot attribution  
+• Scorekeeping and shot attribution
 
---------------------------------------------------------------------
+---
 
 Mining Without Hotspotting
 
@@ -64,15 +64,15 @@ Nodes connect to:
 
 • Each other via Wi-Fi direct  
 • The phone for uplink  
-• The cloud in deferred batches  
+• The cloud in deferred batches
 
 Phone retains mobile data; node traffic is local.
 
---------------------------------------------------------------------
+---
 
 Future Expansion
 
 • Multi-node mesh modes  
 • Long-range Wi-Fi  
 • Caddie AI streaming from device  
-• Solar-powered range nodes  
+• Solar-powered range nodes

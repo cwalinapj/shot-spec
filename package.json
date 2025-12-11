@@ -3,7 +3,17 @@
   "private": true,
   "workspaces": [
     "phone-app",
-    "models/club-catalog"
-    // later you can add "cloud", "solana-tooling", etc.
-  ]
+    "models/club-catalog",
+    "packages/*"
+  ],
+  "scripts": {
+    "lint": "eslint . --ext .ts,.tsx",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "@typescript-eslint/parser": "^6.21.0",
+    "eslint": "^8.57.0",
+    "prettier": "^3.1.1",
+    "typescript": "^5.7.2"
+  }
 }
