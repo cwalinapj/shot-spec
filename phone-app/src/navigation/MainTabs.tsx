@@ -1,9 +1,9 @@
-import React from "react";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { HomeScreen } from "../screens/home/HomeScreen";
-import { BagOverviewScreen } from "../screens/bag/BagOverviewScreen";
-import { SelectModeScreen } from "../screens/session/SelectModeScreen";
-import { SettingsScreen } from "../screens/settings/SettingsScreen";
+import React from 'react';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { HomeScreen } from '../screens/home/HomeScreen';
+import { BagOverviewScreen } from '../screens/bag/BagOverviewScreen';
+import { SelectModeScreen } from '../screens/session/SelectModeScreen';
+import { SettingsScreen } from '../screens/settings/SettingsScreen';
 
 const Tab = createBottomTabNavigator();
 

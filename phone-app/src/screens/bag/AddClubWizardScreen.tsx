@@ -1,5 +1,12 @@
 import React, { useState, useMemo } from 'react';
-import { View, Text, ScrollView, Pressable, StyleSheet, Alert } from 'react-native';
+import {
+  View,
+  Text,
+  ScrollView,
+  Pressable,
+  StyleSheet,
+  Alert,
+} from 'react-native';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { TileButton } from '../../components/TileButton';
 
@@ -54,13 +61,7 @@ const SHAFT_OPTIONS = [
   'Graphite - Senior',
 ];
 
-const GRIP_OPTIONS = [
-  'Standard',
-  'Midsize',
-  'Oversize',
-  'Jumbo',
-  'Custom',
-];
+const GRIP_OPTIONS = ['Standard', 'Midsize', 'Oversize', 'Jumbo', 'Custom'];
 
 const TOTAL_STEPS = 6;
 
@@ -73,18 +74,24 @@ export const AddClubWizardScreen: React.FC<Props> = ({ navigation }) => {
   const [grip, setGrip] = useState<string | null>(null);
 
   const modelsForBrand = useMemo(
-    () => (brand ? MODELS_BY_BRAND[brand] ?? ['Custom'] : []),
-    [brand]
+    () => (brand ? (MODELS_BY_BRAND[brand] ?? ['Custom']) : []),
+    [brand],
   );
 
   const canGoNext = useMemo(() => {
     switch (step) {
-      case 1: return !!clubType;
-      case 2: return !!brand;
-      case 3: return !!model;
-      case 4: return !!shaft;
-      case 5: return !!grip;
-      default: return true;
+      case 1:
+        return !!clubType;
+      case 2:
+        return !!brand;
+      case 3:
+        return !!model;
+      case 4:
+        return !!shaft;
+      case 5:
+        return !!grip;
+      default:
+        return true;
     }
   }, [step, clubType, brand, model, shaft, grip]);
 
@@ -121,9 +128,16 @@ export const AddClubWizardScreen: React.FC<Props> = ({ navigation }) => {
           <Text style={styles.backText}>◀ Back</Text>
         </Pressable>
         <Text style={styles.title}>Add a Club</Text>
-        <Text style={styles.subtitle}>Step {step} of {TOTAL_STEPS}</Text>
+        <Text style={styles.subtitle}>
+          Step {step} of {TOTAL_STEPS}
+        </Text>
         <View style={styles.progressBar}>
-          <View style={[styles.progressFill, { width: `${(step / TOTAL_STEPS) * 100}%` }]} />
+          <View
+            style={[
+              styles.progressFill,
+              { width: `${(step / TOTAL_STEPS) * 100}%` },
+            ]}
+          />
         </View>
       </View>
 
@@ -221,13 +235,24 @@ export const AddClubWizardScreen: React.FC<Props> = ({ navigation }) => {
           <View>
             <Text style={styles.stepTitle}>Review this club</Text>
             <View style={styles.reviewCard}>
-              <Text style={styles.reviewLine}>Type: <Text style={styles.reviewValue}>{clubType ?? '-'}</Text></Text>
-              <Text style={styles.reviewLine}>Brand: <Text style={styles.reviewValue}>{brand ?? '-'}</Text></Text>
-              <Text style={styles.reviewLine}>Model: <Text style={styles.reviewValue}>{model ?? '-'}</Text></Text>
-              <Text style={styles.reviewLine}>Shaft: <Text style={styles.reviewValue}>{shaft ?? '-'}</Text></Text>
-              <Text style={styles.reviewLine}>Grip: <Text style={styles.reviewValue}>{grip ?? '-'}</Text></Text>
+              <Text style={styles.reviewLine}>
+                Type: <Text style={styles.reviewValue}>{clubType ?? '-'}</Text>
+              </Text>
+              <Text style={styles.reviewLine}>
+                Brand: <Text style={styles.reviewValue}>{brand ?? '-'}</Text>
+              </Text>
+              <Text style={styles.reviewLine}>
+                Model: <Text style={styles.reviewValue}>{model ?? '-'}</Text>
+              </Text>
+              <Text style={styles.reviewLine}>
+                Shaft: <Text style={styles.reviewValue}>{shaft ?? '-'}</Text>
+              </Text>
+              <Text style={styles.reviewLine}>
+                Grip: <Text style={styles.reviewValue}>{grip ?? '-'}</Text>
+              </Text>
               <Text style={styles.reviewHint}>
-                Later: this step will also show the NFT preview and “Mint” action.
+                Later: this step will also show the NFT preview and “Mint”
+                action.
               </Text>
             </View>
           </View>
@@ -251,7 +276,12 @@ export const AddClubWizardScreen: React.FC<Props> = ({ navigation }) => {
 };
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#050509', paddingHorizontal: 20, paddingTop: 16 },
+  container: {
+    flex: 1,
+    backgroundColor: '#050509',
+    paddingHorizontal: 20,
+    paddingTop: 16,
+  },
   header: { marginBottom: 12 },
   backText: { color: '#0af', fontSize: 14, marginBottom: 8 },
   title: { fontSize: 22, fontWeight: '700', color: '#fff' },
@@ -269,7 +299,12 @@ const styles = StyleSheet.create({
     backgroundColor: '#0af',
   },
   scroll: { flex: 1, marginTop: 16 },
-  stepTitle: { fontSize: 18, fontWeight: '600', color: '#fff', marginBottom: 12 },
+  stepTitle: {
+    fontSize: 18,
+    fontWeight: '600',
+    color: '#fff',
+    marginBottom: 12,
+  },
   reviewCard: {
     padding: 16,
     borderRadius: 16,

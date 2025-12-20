@@ -34,7 +34,7 @@ export const HomeScreen: React.FC<Props> = ({ navigation }) => {
 
   const displayName = useMemo(
     () => user?.email?.split('@')[0] ?? 'Golfer',
-    [user]
+    [user],
   );
 
   return (
@@ -58,9 +58,7 @@ export const HomeScreen: React.FC<Props> = ({ navigation }) => {
           onPress={() => navigation.navigate('Wallet')}
         >
           <Text style={styles.tileTitle}>Wallet</Text>
-          <Text style={styles.tileSubtitle}>
-            You currently have
-          </Text>
+          <Text style={styles.tileSubtitle}>You currently have</Text>
           <Text style={styles.walletAmount}>
             {tokenBalance.toLocaleString()} tokens
           </Text>
@@ -83,10 +81,13 @@ export const HomeScreen: React.FC<Props> = ({ navigation }) => {
             <Text style={styles.opLine}>
               {todayBoostExample.course} • {todayBoostExample.time}
             </Text>
-            <Text style={styles.opBoost}>{todayBoostExample.estMultiplier}</Text>
+            <Text style={styles.opBoost}>
+              {todayBoostExample.estMultiplier}
+            </Text>
           </View>
           <Text style={styles.tileHint}>
-            We’ll soon connect to tee time APIs and factor in green fees vs rewards.
+            We’ll soon connect to tee time APIs and factor in green fees vs
+            rewards.
           </Text>
         </Pressable>
 
@@ -101,7 +102,8 @@ export const HomeScreen: React.FC<Props> = ({ navigation }) => {
               Add your clubs to unlock full rewards per stroke.
             </Text>
             <Text style={styles.tileHint}>
-              We’ll mint a club NFT for each one so every shot is tagged correctly.
+              We’ll mint a club NFT for each one so every shot is tagged
+              correctly.
             </Text>
           </Pressable>
         )}
